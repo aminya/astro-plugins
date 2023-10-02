@@ -2,10 +2,12 @@ import type { APIContext, MiddlewareNext } from "astro"
 import posthtml, { type Options, type Plugin } from "posthtml"
 
 /**
- * @example
+ * Transform Astro files with PostHTML
+ *
+ * @example Create `./src/middleware.ts` with the following content:
  *
  * ```ts
- * import { getAstroPostHTML } from "@astrojs/posthtml"
+ * import { getAstroPostHTML } from "astro-posthtml"
  * import htmlnano from "htmlnano"
  *
  * export const onRequest = getAstroPostHTML([htmlnano()])

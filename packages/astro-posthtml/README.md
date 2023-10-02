@@ -20,6 +20,8 @@ npm install --save astro-posthtml
 
 ### `getAstroPostHTML` (function)
 
+Transform Astro files with PostHTML
+
 **Parameters:**
 
 - plugins (`Plugin<PostHTMLUseThis>[]`) - The posthtml plugins to use when transforming the HTML files
@@ -27,8 +29,10 @@ npm install --save astro-posthtml
 
 **returns:** (\_context: APIContext<Record<string, any>, Record<string, string>>, next: MiddlewareNext<Response>) => Promise<Response>
 
+Create `./src/middleware.ts` with the following content:
+
 ```ts
-import { getAstroPostHTML } from "@astrojs/posthtml"
+import { getAstroPostHTML } from "astro-posthtml"
 import htmlnano from "htmlnano"
 
 export const onRequest = getAstroPostHTML([htmlnano()])

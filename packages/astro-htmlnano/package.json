@@ -1,0 +1,21 @@
+{
+  "name": "astro-htmlnano",
+  "version": "1.0.0",
+  "description": "Minify Astro files with HTMLNano and CSSNano",
+  "license": "Apache-2.0",
+  "author": "Amin Yahyaabadi <aminyahyaabadi74@gmail.com>",
+  "type": "module",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc --pretty"
+  },
+  "dependencies": {
+    "astro-posthtml": "workspace:*",
+    "cssnano": "^6.0.0",
+    "htmlnano": "2.0.4"
+  },
+  "peerDependencies": {
+    "astro": "3.2.0"
+  },
+  "keywords": []
+}

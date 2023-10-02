@@ -37,7 +37,9 @@
     "typescript": "^5.2.2",
     "typesync": "^0.11.1"
   },
-  "engines": {},
+  "engines": {
+    "node": ">=16"
+  },
   "keywords": [
     "parcel",
     "astro",
@@ -57,6 +59,7 @@
     "relative-attribute",
     "attribute"
   ],
+  "packageManager": "pnpm@8.6.1",
   "packages": [
     "./packages/*"
   ]
