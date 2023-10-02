@@ -23,12 +23,20 @@ export function getAstroPostHTML(plugins: Parameters<typeof posthtml>[0]) {
       return response
     }
 
-    // modify HTML using posthtml
-    const { html: modifiedHTML } = await posthtml(plugins).process(originalHTML, {})
+    try {
+      // modify HTML using posthtml
+      const { html: modifiedHTML } = await posthtml(plugins).process(originalHTML, {})
 
-    return new Response(modifiedHTML, {
-      status: 200,
-      headers: response.headers,
-    })
+      return new Response(modifiedHTML, {
+        status: 200,
+        headers: response.headers,
+      })
+    } catch (err) {
+      console.error(err)
+      return new Response(originalHTML, {
+        status: 500,
+        headers: response.headers,
+      })
+    }
   }
 }
