@@ -2,6 +2,8 @@
   "name": "astro-posthtml",
   "version": "1.0.0",
   "description": "Transform Astro files with PostHTML",
+  "homepage": "https://github.com/aminya/astro-plugins/tree/main/packages/astro-posthtml",
+  "repository": "https://github.com/aminya/astro-plugins/tree/main/packages/astro-posthtml",
   "license": "Apache-2.0",
   "author": "Amin Yahyaabadi <aminyahyaabadi74@gmail.com>",
   "type": "module",
@@ -15,5 +17,17 @@
   "peerDependencies": {
     "astro": "3.2.0"
   },
-  "keywords": []
+  "keywords": [
+    "astro",
+    "posthtml",
+    "transform",
+    "plugin",
+    "astro-plugin",
+    "astro-htmlnano",
+    "astro-cssnano",
+    "astro-minify",
+    "astro-minifier",
+    "astro-middleware",
+    "optimize"
+  ]
 }

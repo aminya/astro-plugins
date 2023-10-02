@@ -86,4 +86,4 @@ You can sponsor my work here:
 https://github.com/sponsors/aminya
 
 Pull requests, issues and feature requests are welcome.
-See the [Contributing guide](https://github.com/aminya/setup-cpp/blob/master/CONTRIBUTING.md).
+See the [Contributing guide](https://github.com/aminya/atro-plugins/blob/master/CONTRIBUTING.md).
