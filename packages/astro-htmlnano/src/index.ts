@@ -19,5 +19,5 @@ import htmlnano, { HtmlnanoOptions, Presets } from "htmlnano"
  */
 export function getAstroHTMLNano(options?: HtmlnanoOptions, preset?: Presets[keyof Presets]) {
   return (_context: APIContext, next: MiddlewareNext<Response>) =>
-    getAstroPostHTML([htmlnano.default(options, preset)])(_context, next)
+    getAstroPostHTML([htmlnano(options, preset)])(_context, next)
 }

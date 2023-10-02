@@ -1,6 +1,6 @@
 {
   "name": "astro-plugins",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "Various astro plugins such as astro-htmlnano to minify Astro files with HTMLNano and CSSNano",
   "homepage": "https://github.com/aminya/astro-plugins",
@@ -15,7 +15,7 @@
     "doc": "shx rm -rf packages/*/README.md && pnpm -r exec readme --path ../../dev/readme/template.md -y && pnpm -r exec ts-readme",
     "format": "prettier --write .",
     "lint": "eslint . --fix",
-    "prepare": "npm run build",
+    "prepare": "pnpm run build",
     "test": "run-p test.cspell test.lint",
     "test.cspell": "cspell lint --no-progress --show-suggestions",
     "test.format": "prettier . --check",
