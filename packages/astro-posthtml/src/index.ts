@@ -1,5 +1,5 @@
 import type { APIContext, MiddlewareNext } from "astro"
-import posthtml from "posthtml"
+import posthtml, { type Options, type Plugin } from "posthtml"
 
 /**
  * @example
@@ -12,9 +12,13 @@ import posthtml from "posthtml"
  * ```
  *
  * @param plugins The posthtml plugins to use when transforming the HTML files
+ * @param options The posthtml options
  * @returns A middleware function that can be used in Astro
  */
-export function getAstroPostHTML(plugins: Parameters<typeof posthtml>[0]) {
+export function getAstroPostHTML<PostHTMLUseThis, PostHTMLMessage>(
+  plugins?: Plugin<PostHTMLUseThis>[],
+  options?: Options,
+) {
   return async (_context: APIContext, next: MiddlewareNext<Response>) => {
     const response = await next()
     const originalHTML = await response.text()
@@ -25,7 +29,15 @@ export function getAstroPostHTML(plugins: Parameters<typeof posthtml>[0]) {
 
     try {
       // modify HTML using posthtml
-      const { html: modifiedHTML } = await posthtml(plugins).process(originalHTML, {})
+      const { html: modifiedHTML, messages } = await posthtml<PostHTMLUseThis, PostHTMLMessage>(plugins).process(
+        originalHTML,
+        options,
+      )
+
+      // log posthtml messages
+      for (const message of messages) {
+        console.log(message)
+      }
 
       return new Response(modifiedHTML, {
         status: 200,
