@@ -8,6 +8,7 @@
   "author": "Amin Yahyaabadi <aminyahyaabadi74@gmail.com>",
   "type": "module",
   "main": "./dist/index.js",
+  "source": "./src/index.ts",
   "scripts": {
     "build": "tsc --pretty"
   },
@@ -16,6 +17,9 @@
   },
   "peerDependencies": {
     "astro": "3.2.0"
+  },
+  "engines": {
+    "node": ">=16.x"
   },
   "keywords": [
     "astro",
@@ -29,5 +33,16 @@
     "astro-minifier",
     "astro-middleware",
     "optimize"
-  ]
+  ],
+  "targets": {
+    "main": {
+      "context": "node",
+      "engines": {
+        "node": ">=16.x"
+      },
+      "isLibrary": true,
+      "includeNodeModules": true,
+      "optimize": false
+    }
+  }
 }
