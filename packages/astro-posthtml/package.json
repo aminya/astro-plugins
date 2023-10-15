@@ -10,7 +10,8 @@
   "main": "./dist/index.js",
   "source": "./src/index.ts",
   "scripts": {
-    "build": "tsc --pretty"
+    "build": "shx rm -rf dist && tsc --pretty",
+    "prepublishOnly": "pnpm run build"
   },
   "dependencies": {
     "posthtml": "^0.16.6"

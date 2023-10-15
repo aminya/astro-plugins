@@ -1,6 +1,6 @@
 {
   "name": "astro-htmlnano",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Minify Astro files with HTMLNano and CSSNano",
   "homepage": "https://github.com/aminya/astro-plugins/tree/main/packages/astro-htmlnano",
   "repository": "https://github.com/aminya/astro-plugins/tree/main/packages/astro-htmlnano",
@@ -10,7 +10,8 @@
   "main": "./dist/index.js",
   "source": "./src/index.ts",
   "scripts": {
-    "build": "tsc --pretty"
+    "build": "shx rm -rf dist && tsc --pretty",
+    "prepublishOnly": "pnpm run build"
   },
   "dependencies": {
     "astro-posthtml": "workspace:*",

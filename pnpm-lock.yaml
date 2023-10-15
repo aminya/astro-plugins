@@ -60,8 +60,8 @@ importers:
         specifier: ^6.0.0
         version: 6.0.0(postcss@8.4.31)
       htmlnano:
-        specifier: github:aminya/htmlnano#e7df5b4b87dec5d949df3791e9a3327e3d315de0
-        version: github.com/aminya/htmlnano/e7df5b4b87dec5d949df3791e9a3327e3d315de0(cssnano@6.0.0)(postcss@8.4.31)(typescript@5.2.2)
+        specifier: github:aminya/htmlnano#c584ddc2214d86c009cf2033423940c137d31306
+        version: github.com/aminya/htmlnano/c584ddc2214d86c009cf2033423940c137d31306(cssnano@6.0.0)(postcss@8.4.31)(typescript@5.2.2)
 
   packages/astro-posthtml:
     dependencies:
@@ -9142,9 +9142,9 @@ packages:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: false
 
-  github.com/aminya/htmlnano/e7df5b4b87dec5d949df3791e9a3327e3d315de0(cssnano@6.0.0)(postcss@8.4.31)(typescript@5.2.2):
-    resolution: {tarball: https://codeload.github.com/aminya/htmlnano/tar.gz/e7df5b4b87dec5d949df3791e9a3327e3d315de0}
-    id: github.com/aminya/htmlnano/e7df5b4b87dec5d949df3791e9a3327e3d315de0
+  github.com/aminya/htmlnano/c584ddc2214d86c009cf2033423940c137d31306(cssnano@6.0.0)(postcss@8.4.31)(typescript@5.2.2):
+    resolution: {tarball: https://codeload.github.com/aminya/htmlnano/tar.gz/c584ddc2214d86c009cf2033423940c137d31306}
+    id: github.com/aminya/htmlnano/c584ddc2214d86c009cf2033423940c137d31306
     name: htmlnano
     version: 2.0.4
     prepare: true
