@@ -10,7 +10,7 @@
   "main": "./dist/index.js",
   "source": "./src/index.ts",
   "scripts": {
-    "build": "tsc --pretty"
+    "build": "tsc --pretty && parcel build"
   },
   "dependencies": {
     "posthtml": "^0.16.6"
@@ -42,7 +42,7 @@
       },
       "isLibrary": true,
       "includeNodeModules": true,
-      "optimize": false
+      "optimize": true
     }
   }
 }

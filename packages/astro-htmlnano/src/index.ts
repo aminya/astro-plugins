@@ -1,6 +1,6 @@
 import type { APIContext, MiddlewareNext } from "astro"
 import { getAstroPostHTML } from "astro-posthtml"
-import htmlnano, {type HtmlnanoOptions, type Presets } from "htmlnano/index.mjs"
+import htmlnano, { type HtmlnanoOptions, type Presets } from "htmlnano/index.mjs"
 
 /**
  * Minify Astro files with HTMLNano and CSSNano

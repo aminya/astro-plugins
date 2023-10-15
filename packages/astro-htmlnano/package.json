@@ -10,7 +10,7 @@
   "main": "./dist/index.js",
   "source": "./src/index.ts",
   "scripts": {
-    "build": "tsc --pretty"
+    "build": "tsc --pretty && parcel build"
   },
   "dependencies": {
     "astro-posthtml": "workspace:*",
@@ -43,8 +43,10 @@
         "node": ">=16.x"
       },
       "isLibrary": true,
-      "includeNodeModules": true,
-      "optimize": false
+      "includeNodeModules": {
+        "typescript": false
+      },
+      "optimize": true
     }
   }
 }
