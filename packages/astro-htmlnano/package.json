@@ -15,7 +15,7 @@
   "dependencies": {
     "astro-posthtml": "workspace:*",
     "cssnano": "^6.0.0",
-    "htmlnano": "github:aminya/htmlnano#e7df5b4b87dec5d949df3791e9a3327e3d315de0"
+    "htmlnano": "github:aminya/htmlnano#c584ddc2214d86c009cf2033423940c137d31306"
   },
   "peerDependencies": {
     "astro": "3.2.0"
