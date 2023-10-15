@@ -8,16 +8,20 @@
   "author": "Amin Yahyaabadi <aminyahyaabadi74@gmail.com>",
   "type": "module",
   "main": "./dist/index.js",
+  "source": "./src/index.ts",
   "scripts": {
     "build": "tsc --pretty"
   },
   "dependencies": {
     "astro-posthtml": "workspace:*",
     "cssnano": "^6.0.0",
-    "htmlnano": "2.0.4"
+    "htmlnano": "github:aminya/htmlnano#e7df5b4b87dec5d949df3791e9a3327e3d315de0"
   },
   "peerDependencies": {
     "astro": "3.2.0"
+  },
+  "engines": {
+    "node": ">=16.x"
   },
   "keywords": [
     "astro",
@@ -31,5 +35,16 @@
     "astro-minifier",
     "astro-middleware",
     "optimize"
-  ]
+  ],
+  "targets": {
+    "main": {
+      "context": "node",
+      "engines": {
+        "node": ">=16.x"
+      },
+      "isLibrary": true,
+      "includeNodeModules": true,
+      "optimize": false
+    }
+  }
 }
