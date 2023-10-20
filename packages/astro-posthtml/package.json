@@ -45,5 +45,6 @@
       "includeNodeModules": true,
       "optimize": false
     }
-  }
+  },
+  "devDependencies": {}
 }
