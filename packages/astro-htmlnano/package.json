@@ -1,6 +1,6 @@
 {
   "name": "astro-htmlnano",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "description": "Minify Astro files with HTMLNano and CSSNano",
   "homepage": "https://github.com/aminya/astro-plugins/tree/main/packages/astro-htmlnano",
   "repository": "https://github.com/aminya/astro-plugins/tree/main/packages/astro-htmlnano",
@@ -15,13 +15,16 @@
   },
   "dependencies": {
     "astro-posthtml": "workspace:*",
-    "cssnano": "^6.0.1",
+    "cssnano": "^6.0.3",
     "htmlnano": "2.1.0",
-    "postcss": "^8.4.31",
+    "postcss": "^8.4.33",
     "relateurl": "^0.2.7",
     "srcset": "^5.0.0",
-    "svgo": "^3.0.2",
-    "terser": "^5.22.0"
+    "svgo": "^3.2.0",
+    "terser": "^5.26.0"
+  },
+  "devDependencies": {
+    "@types/relateurl": "^0.2.33"
   },
   "peerDependencies": {
     "astro": "3.2.0"
@@ -52,8 +55,5 @@
       "includeNodeModules": true,
       "optimize": false
     }
-  },
-  "devDependencies": {
-    "@types/relateurl": "^0.2.31"
   }
 }

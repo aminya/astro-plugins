@@ -10,7 +10,7 @@ import posthtml, { type Options, type Plugin } from "posthtml"
  * import { getAstroPostHTML } from "astro-posthtml"
  * import htmlnano from "htmlnano"
  *
- * export const onRequest = getAstroPostHTML([htmlnano()])
+ * export const onRequest = process.env.NODE_ENV === "production" ? getAstroPostHTML([htmlnano()]) : undefined
  * ```
  *
  * @param plugins The posthtml plugins to use when transforming the HTML files
@@ -19,7 +19,7 @@ import posthtml, { type Options, type Plugin } from "posthtml"
  */
 export function getAstroPostHTML<PostHTMLUseThis, PostHTMLMessage>(
   plugins?: Plugin<PostHTMLUseThis>[],
-  options?: Options,
+  options?: Options
 ) {
   return async (_context: APIContext, next: MiddlewareNext<Response>) => {
     const response = await next()
@@ -33,7 +33,7 @@ export function getAstroPostHTML<PostHTMLUseThis, PostHTMLMessage>(
       // modify HTML using posthtml
       const { html: modifiedHTML, messages } = await posthtml<PostHTMLUseThis, PostHTMLMessage>(plugins).process(
         originalHTML,
-        options,
+        options
       )
 
       // log posthtml messages

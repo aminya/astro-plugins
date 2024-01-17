@@ -35,7 +35,7 @@ Create `./src/middleware.ts` with the following content:
 import { getAstroPostHTML } from "astro-posthtml"
 import htmlnano from "htmlnano"
 
-export const onRequest = getAstroPostHTML([htmlnano()])
+export const onRequest = process.env.NODE_ENV === "production" ? getAstroPostHTML([htmlnano()]) : undefined
 ```
 
 <!-- INSERT GENERATED DOCS END -->
