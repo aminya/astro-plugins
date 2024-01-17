@@ -20,7 +20,7 @@ npm install --save astro-htmlnano
 
 ### `getAstroHTMLNano` (function)
 
-Minify Astro files with HTMLNano and CSSNano
+Minify Astro files with HTMLNano and CSSNano in the production mode
 
 **Parameters:**
 
@@ -36,6 +36,8 @@ import { getAstroHTMLNano } from "astro-htmlnano"
 
 export const onRequest = getAstroHTMLNano()
 ```
+
+Note: this is only enabled when `process.env.NODE_ENV === "production"`
 
 <!-- INSERT GENERATED DOCS END -->
 
