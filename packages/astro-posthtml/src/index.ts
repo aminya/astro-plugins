@@ -21,7 +21,7 @@ export function getAstroPostHTML<PostHTMLUseThis, PostHTMLMessage>(
   plugins?: Plugin<PostHTMLUseThis>[],
   options?: Options
 ) {
-  return async (_context: APIContext, next: MiddlewareNext<Response>) => {
+  return async (_context: APIContext, next: MiddlewareNext) => {
     const response = await next()
     const originalHTML = await response.text()
 
