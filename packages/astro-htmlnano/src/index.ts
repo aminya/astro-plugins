@@ -20,8 +20,7 @@ import htmlnano, { type HtmlnanoOptions, type Presets } from "htmlnano/index.mjs
  */
 export function getAstroHTMLNano(options?: HtmlnanoOptions, preset?: Presets[keyof Presets]) {
   if (process.env.NODE_ENV === "production") {
-    return (_context: APIContext, next: MiddlewareNext<Response>) =>
-      getAstroPostHTML([htmlnano(options, preset)])(_context, next)
+    return (_context: APIContext, next: MiddlewareNext) => getAstroPostHTML([htmlnano(options, preset)])(_context, next)
   }
-  return (_context: APIContext, next: MiddlewareNext<Response>) => next()
+  return (_context: APIContext, next: MiddlewareNext) => next()
 }

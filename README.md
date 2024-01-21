@@ -27,7 +27,7 @@ Minify Astro files with HTMLNano and CSSNano
 - options (`HtmlnanoOptions`) - The HTMLNano options to use when transforming the HTML files
 - preset (`HtmlnanoPreset`) - The HTMLNano preset to use
 
-**returns:** (\_context: APIContext<Record<string, any>, Record<string, string>>, next: MiddlewareNext<Response>) => Promise<Response>
+**returns:** (\_context: APIContext<Record<string, any>, Record<string, string>>, next: MiddlewareNext) => Promise<Response>
 
 Create `./src/middleware.ts` with the following content:
 
@@ -68,7 +68,7 @@ Transform Astro files with PostHTML
 - plugins (`Plugin<PostHTMLUseThis>[]`) - The posthtml plugins to use when transforming the HTML files
 - options (`Options`) - The posthtml options
 
-**returns:** (\_context: APIContext<Record<string, any>, Record<string, string>>, next: MiddlewareNext<Response>) => Promise<Response>
+**returns:** (\_context: APIContext<Record<string, any>, Record<string, string>>, next: MiddlewareNext) => Promise<Response>
 
 Create `./src/middleware.ts` with the following content:
 
