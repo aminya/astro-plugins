@@ -21,7 +21,7 @@
     "relateurl": "^0.2.7",
     "srcset": "^5.0.0",
     "svgo": "^3.2.0",
-    "terser": "^5.26.0"
+    "terser": "^5.27.0"
   },
   "devDependencies": {
     "@types/relateurl": "^0.2.33"
