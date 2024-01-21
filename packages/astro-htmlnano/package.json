@@ -27,7 +27,7 @@
     "@types/relateurl": "^0.2.33"
   },
   "peerDependencies": {
-    "astro": "3.2.0"
+    "astro": "4.2.1"
   },
   "engines": {
     "node": ">=16.x"
