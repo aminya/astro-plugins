@@ -15,13 +15,13 @@
   },
   "dependencies": {
     "astro-posthtml": "workspace:*",
-    "cssnano": "^6.0.5",
+    "cssnano": "^6.1.1",
     "htmlnano": "2.1.0",
-    "postcss": "^8.4.35",
+    "postcss": "^8.4.38",
     "relateurl": "^0.2.7",
     "srcset": "^5.0.1",
     "svgo": "^3.2.0",
-    "terser": "^5.28.1"
+    "terser": "^5.29.2"
   },
   "devDependencies": {
     "@types/relateurl": "^0.2.33"

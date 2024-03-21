@@ -20,7 +20,17 @@ import htmlnano, { type HtmlnanoOptions, type Presets } from "htmlnano/index.mjs
  */
 export function getAstroHTMLNano(options?: HtmlnanoOptions, preset?: Presets[keyof Presets]) {
   if (process.env.NODE_ENV === "production") {
-    return (_context: APIContext, next: MiddlewareNext) => getAstroPostHTML([htmlnano(options, preset)])(_context, next)
+    return (_context: APIContext, next: MiddlewareNext) => {
+      const htmlnanoOptions: HtmlnanoOptions = options ?? {}
+
+      // disable `removeComments` due to Astro's use of comments for hydration
+      if (htmlnanoOptions.removeComments) {
+        console.warn("`removeComments` is disabled due to Astro's use of comments for hydration.")
+      }
+      htmlnanoOptions.removeComments = false
+
+      return getAstroPostHTML([htmlnano(htmlnanoOptions, preset)])(_context, next)
+    }
   }
   return (_context: APIContext, next: MiddlewareNext) => next()
 }
