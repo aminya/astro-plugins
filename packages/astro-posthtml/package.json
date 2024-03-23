@@ -1,6 +1,6 @@
 {
   "name": "astro-posthtml",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Transform Astro files with PostHTML",
   "homepage": "https://github.com/aminya/astro-plugins/tree/main/packages/astro-posthtml",
   "repository": "https://github.com/aminya/astro-plugins/tree/main/packages/astro-posthtml",
@@ -18,7 +18,7 @@
   },
   "devDependencies": {},
   "peerDependencies": {
-    "astro": "4.5.4"
+    "astro": "^4"
   },
   "engines": {
     "node": ">=16.x"
