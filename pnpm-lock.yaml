@@ -10,7 +10,7 @@ importers:
     devDependencies:
       '@types/node':
         specifier: ^20.11.30
-        version: 20.12.7
+        version: 20.12.8
       cspell:
         specifier: ^8.6.0
         version: 8.7.0
@@ -1413,7 +1413,7 @@ packages:
     resolution: {integrity: sha512-ZUxbzKl0IfJILTS6t7ip5fQQM/J3TJYubDm3nMbgubNNYS62eXeUpoLUC8/7fJNiFYHTrGPQn7hspDUzIHX3UA==}
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 20.12.7
+      '@types/node': 20.12.8
     dev: true
 
   /@types/hast@3.0.3:
@@ -1458,8 +1458,8 @@ packages:
       undici-types: 5.26.5
     dev: false
 
-  /@types/node@20.12.7:
-    resolution: {integrity: sha512-wq0cICSkRLVaf3UGLMGItu/PtdY7oaXaI/RVU+xliKVOtRna3PRY57ZDfztpDL0n11vfymMUnXv8QwYCO7L1wg==}
+  /@types/node@20.12.8:
+    resolution: {integrity: sha512-NU0rJLJnshZWdE/097cdCBbyW1h4hEg0xpovcoAQYHl8dnEyp/NAOiE45pvc+Bd1Dt+2r94v2eGFpQJ4R7g+2w==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -3752,7 +3752,7 @@ packages:
     dev: true
     optional: true
 
-  /eslint-config-airbnb@18.2.1(eslint-plugin-import@2.29.1)(eslint-plugin-jsx-a11y@6.8.0)(eslint-plugin-react-hooks@4.6.1)(eslint-plugin-react@7.23.2)(eslint@8.57.0):
+  /eslint-config-airbnb@18.2.1(eslint-plugin-import@2.29.1)(eslint-plugin-jsx-a11y@6.8.0)(eslint-plugin-react-hooks@4.6.2)(eslint-plugin-react@7.23.2)(eslint@8.57.0):
     resolution: {integrity: sha512-glZNDEZ36VdlZWoxn/bUR1r/sdFKPd1mHPbqUtkctgNG4yT2DLLtJ3D+yCV+jzZCc2V1nBVkmdknOJBZ5Hc0fg==}
     engines: {node: '>= 6'}
     requiresBuild: true
@@ -3768,7 +3768,7 @@ packages:
       eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.1.1)(eslint@8.57.0)
       eslint-plugin-jsx-a11y: 6.8.0(eslint@8.57.0)
       eslint-plugin-react: 7.23.2(eslint@8.57.0)
-      eslint-plugin-react-hooks: 4.6.1(eslint@8.57.0)
+      eslint-plugin-react-hooks: 4.6.2(eslint@8.57.0)
       object.assign: 4.1.5
       object.entries: 1.1.8
     dev: true
@@ -3806,8 +3806,8 @@ packages:
       typescript: 5.4.5
     optionalDependencies:
       coffeescript: 1.12.7
-      eslint-plugin-coffee: 0.1.15(@typescript-eslint/parser@7.1.1)(eslint-plugin-react-hooks@4.6.1)(eslint@8.57.0)
-      eslint-plugin-react-hooks: 4.6.1(eslint@8.57.0)
+      eslint-plugin-coffee: 0.1.15(@typescript-eslint/parser@7.1.1)(eslint-plugin-react-hooks@4.6.2)(eslint@8.57.0)
+      eslint-plugin-react-hooks: 4.6.2(eslint@8.57.0)
     transitivePeerDependencies:
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
@@ -3880,7 +3880,7 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-plugin-coffee@0.1.15(@typescript-eslint/parser@7.1.1)(eslint-plugin-react-hooks@4.6.1)(eslint@8.57.0):
+  /eslint-plugin-coffee@0.1.15(@typescript-eslint/parser@7.1.1)(eslint-plugin-react-hooks@4.6.2)(eslint@8.57.0):
     resolution: {integrity: sha512-+qtkIPSc9etYqOODIlENqiRjID/oEoGMAAQJN988Aczy461NIwzaamFY6Fi0QDVVDb2v+OL/StVrk/QmyItfeg==}
     requiresBuild: true
     peerDependencies:
@@ -3892,7 +3892,7 @@ packages:
       coffeescript: 2.7.0
       doctrine: 2.1.0
       eslint: 8.57.0
-      eslint-config-airbnb: 18.2.1(eslint-plugin-import@2.29.1)(eslint-plugin-jsx-a11y@6.8.0)(eslint-plugin-react-hooks@4.6.1)(eslint-plugin-react@7.23.2)(eslint@8.57.0)
+      eslint-config-airbnb: 18.2.1(eslint-plugin-import@2.29.1)(eslint-plugin-jsx-a11y@6.8.0)(eslint-plugin-react-hooks@4.6.2)(eslint-plugin-react@7.23.2)(eslint@8.57.0)
       eslint-config-airbnb-base: 14.2.1(eslint-plugin-import@2.29.1)(eslint@8.57.0)
       eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.1.1)(eslint@8.57.0)
       eslint-plugin-jsx-a11y: 6.8.0(eslint@8.57.0)
@@ -4022,8 +4022,8 @@ packages:
       regexp-tree: 0.1.27
     dev: true
 
-  /eslint-plugin-react-hooks@4.6.1(eslint@8.57.0):
-    resolution: {integrity: sha512-Ck77j8hF7l9N4S/rzSLOWEKpn994YH6iwUK8fr9mXIaQvGpQYmOnQLbiue1u5kI5T1y+gdgqosnEAO9NCz0DBg==}
+  /eslint-plugin-react-hooks@4.6.2(eslint@8.57.0):
+    resolution: {integrity: sha512-QzliNJq4GinDBcD8gPB5v0wh6g8q3SUi6EFF0x8N/BL9PoVs0atuGc47ozMRyOWAKdwaZ5OnbOEa3WR+dSGKuQ==}
     engines: {node: '>=10'}
     requiresBuild: true
     peerDependencies:
