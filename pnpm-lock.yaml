@@ -10,7 +10,7 @@ importers:
     devDependencies:
       '@types/node':
         specifier: ^20.11.30
-        version: 20.12.13
+        version: 20.14.0
       cspell:
         specifier: ^8.6.0
         version: 8.8.3
@@ -1418,7 +1418,7 @@ packages:
     resolution: {integrity: sha512-ZUxbzKl0IfJILTS6t7ip5fQQM/J3TJYubDm3nMbgubNNYS62eXeUpoLUC8/7fJNiFYHTrGPQn7hspDUzIHX3UA==}
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 20.12.13
+      '@types/node': 20.14.0
     dev: true
 
   /@types/hast@3.0.3:
@@ -1463,8 +1463,8 @@ packages:
       undici-types: 5.26.5
     dev: false
 
-  /@types/node@20.12.13:
-    resolution: {integrity: sha512-gBGeanV41c1L171rR7wjbMiEpEI/l5XFQdLLfhr/REwpgDy/4U8y89+i8kRiLzDyZdOkXh+cRaTetUnCYutoXA==}
+  /@types/node@20.14.0:
+    resolution: {integrity: sha512-5cHBxFGJx6L4s56Bubp4fglrEpmyJypsqI6RgzMfBHWUJQGWAAi8cWcgetEbZXHYXo9C2Fa4EEds/uSyS4cxmA==}
     dependencies:
       undici-types: 5.26.5
     dev: true
