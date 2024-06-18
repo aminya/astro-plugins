@@ -10,7 +10,7 @@ importers:
     devDependencies:
       '@types/node':
         specifier: ^20.11.30
-        version: 20.14.2
+        version: 20.14.5
       cspell:
         specifier: ^8.6.0
         version: 8.8.4
@@ -1664,7 +1664,7 @@ packages:
     resolution: {integrity: sha512-ZUxbzKl0IfJILTS6t7ip5fQQM/J3TJYubDm3nMbgubNNYS62eXeUpoLUC8/7fJNiFYHTrGPQn7hspDUzIHX3UA==}
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 20.14.2
+      '@types/node': 20.14.5
     dev: true
 
   /@types/hast@3.0.3:
@@ -1705,8 +1705,8 @@ packages:
       undici-types: 5.26.5
     dev: false
 
-  /@types/node@20.14.2:
-    resolution: {integrity: sha512-xyu6WAMVwv6AKFLB+e/7ySZVr/0zLCzOa7rSpq6jNwpqOrUbcACDWC+53d4n2QHOnDou0fbIsg8wZu/sxrnI4Q==}
+  /@types/node@20.14.5:
+    resolution: {integrity: sha512-aoRR+fJkZT2l0aGOJhuA8frnCSoNX6W7U2mpNq63+BxBIj5BQFt8rHy627kijCmm63ijdSdwvGgpUsU6MBsZZA==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -4993,7 +4993,7 @@ packages:
       remove: 0.1.5
     optionalDependencies:
       make-unique: 1.0.4
-      sort-es: 1.7.9
+      sort-es: 1.7.10
     dev: true
 
   /gopd@1.0.1:
@@ -8818,8 +8818,8 @@ packages:
       smart-buffer: 4.2.0
     dev: true
 
-  /sort-es@1.7.9:
-    resolution: {integrity: sha512-eOfRa4OraioGiTPxpteh7mYDmxaSBIRrfDoQAJsRn5o5FKl/eYVTuKdDV3TuKfksAxsxUhz6Imxob8rGkPm8vQ==}
+  /sort-es@1.7.10:
+    resolution: {integrity: sha512-H1yPzqZpP0MCdOTVywwrRR+ZoqwZBO+i648zqMHa1QpD+KxMQzjzqahd1BXFgMruwVJhbR+vfH3eUR+epfBELw==}
     requiresBuild: true
     dev: true
     optional: true
