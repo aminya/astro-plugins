@@ -15,8 +15,8 @@
   },
   "dependencies": {
     "astro-posthtml": "workspace:*",
-    "cssnano": "^6.1.1",
-    "htmlnano": "2.1.0",
+    "cssnano": "^7.0.0",
+    "htmlnano": "2.1.1",
     "postcss": "^8.4.38",
     "relateurl": "^0.2.7",
     "srcset": "^5.0.1",
