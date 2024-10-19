@@ -61,7 +61,7 @@ importers:
         version: 7.0.6(postcss@8.4.47)
       htmlnano:
         specifier: 2.1.1
-        version: 2.1.1(cssnano@7.0.6(postcss@8.4.47))(postcss@8.4.47)(relateurl@0.2.7)(srcset@5.0.1)(svgo@3.3.2)(terser@5.34.1)(typescript@5.6.3)
+        version: 2.1.1(cssnano@7.0.6(postcss@8.4.47))(postcss@8.4.47)(relateurl@0.2.7)(srcset@5.0.1)(svgo@3.3.2)(terser@5.36.0)(typescript@5.6.3)
       postcss:
         specifier: ^8.4.38
         version: 8.4.47
@@ -76,7 +76,7 @@ importers:
         version: 3.3.2
       terser:
         specifier: ^5.29.2
-        version: 5.34.1
+        version: 5.36.0
     devDependencies:
       '@types/relateurl':
         specifier: ^0.2.33
@@ -1113,8 +1113,8 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
 
-  acorn@8.12.1:
-    resolution: {integrity: sha512-tcpGyI9zbizT9JbV6oYE477V6mTlXvvi0T0G3SNIYE2apm/G5huBa1+K89VGeovbg+jycCrfhl3ADxErOuO6Jg==}
+  acorn@8.13.0:
+    resolution: {integrity: sha512-8zSiw54Oxrdym50NlZ9sUusyO1Z1ZchgRLWRaK6c86XJFClyCgFKetdowBg5bKxyp/u+CDBJG4Mpp0m3HLZl9w==}
     engines: {node: '>=0.4.0'}
     hasBin: true
 
@@ -4846,8 +4846,8 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
-  terser@5.34.1:
-    resolution: {integrity: sha512-FsJZ7iZLd/BXkz+4xrRTGJ26o/6VTjQytUk8b8OxkwcD2I+79VPJlz7qss1+zE7h8GNIScFqXcDyJ/KqBYZFVA==}
+  terser@5.36.0:
+    resolution: {integrity: sha512-IYV9eNMuFAV4THUspIRXkLakHnV6XO7FEdtKjf/mDyrnqUg9LnlOn6/RwRvM9SZjR4GUq8Nk8zj67FzVARr74w==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -6396,13 +6396,13 @@ snapshots:
 
   abbrev@1.1.1: {}
 
-  acorn-jsx@5.3.2(acorn@8.12.1):
+  acorn-jsx@5.3.2(acorn@8.13.0):
     dependencies:
-      acorn: 8.12.1
+      acorn: 8.13.0
 
   acorn@8.11.3: {}
 
-  acorn@8.12.1: {}
+  acorn@8.13.0: {}
 
   agent-base@6.0.2:
     dependencies:
@@ -8089,8 +8089,8 @@ snapshots:
 
   espree@9.6.1:
     dependencies:
-      acorn: 8.12.1
-      acorn-jsx: 5.3.2(acorn@8.12.1)
+      acorn: 8.13.0
+      acorn-jsx: 5.3.2(acorn@8.13.0)
       eslint-visitor-keys: 3.4.3
 
   esprima@4.0.1: {}
@@ -8603,7 +8603,7 @@ snapshots:
 
   html-void-elements@3.0.0: {}
 
-  htmlnano@2.1.1(cssnano@7.0.6(postcss@8.4.47))(postcss@8.4.47)(relateurl@0.2.7)(srcset@5.0.1)(svgo@3.3.2)(terser@5.34.1)(typescript@5.6.3):
+  htmlnano@2.1.1(cssnano@7.0.6(postcss@8.4.47))(postcss@8.4.47)(relateurl@0.2.7)(srcset@5.0.1)(svgo@3.3.2)(terser@5.36.0)(typescript@5.6.3):
     dependencies:
       cosmiconfig: 9.0.0(typescript@5.6.3)
       posthtml: 0.16.6
@@ -8614,7 +8614,7 @@ snapshots:
       relateurl: 0.2.7
       srcset: 5.0.1
       svgo: 3.3.2
-      terser: 5.34.1
+      terser: 5.36.0
     transitivePeerDependencies:
       - typescript
 
@@ -11157,10 +11157,10 @@ snapshots:
       commander: 2.20.3
       source-map-support: 0.5.21
 
-  terser@5.34.1:
+  terser@5.36.0:
     dependencies:
       '@jridgewell/source-map': 0.3.6
-      acorn: 8.12.1
+      acorn: 8.13.0
       commander: 2.20.3
       source-map-support: 0.5.21
 
