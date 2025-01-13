@@ -60,7 +60,7 @@
     "relative-attribute",
     "attribute"
   ],
-  "packageManager": "pnpm@9.12.1",
+  "packageManager": "pnpm@9.15.4",
   "packages": [
     "./packages/*"
   ]
