@@ -14,11 +14,11 @@
     "prepublishOnly": "pnpm run build"
   },
   "dependencies": {
-    "posthtml": "^0.16.6"
+    "posthtml": "^0.16.6",
+    "shx": "^0.4.0"
   },
-  "devDependencies": {},
   "peerDependencies": {
-    "astro": "^4"
+    "astro": ">=4"
   },
   "engines": {
     "node": ">=16.x"
