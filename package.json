@@ -1,6 +1,6 @@
 {
   "name": "astro-plugins",
-  "version": "1.4.4",
+  "version": "1.4.5",
   "private": true,
   "description": "Various astro plugins such as astro-htmlnano to minify Astro files with HTMLNano and CSSNano",
   "homepage": "https://github.com/aminya/astro-plugins",

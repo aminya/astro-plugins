@@ -1,6 +1,6 @@
 {
   "name": "astro-htmlnano",
-  "version": "1.4.4",
+  "version": "1.4.5",
   "description": "Minify Astro files with HTMLNano and CSSNano",
   "homepage": "https://github.com/aminya/astro-plugins/tree/main/packages/astro-htmlnano",
   "repository": "https://github.com/aminya/astro-plugins/tree/main/packages/astro-htmlnano",
