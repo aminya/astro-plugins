@@ -24,6 +24,7 @@ export function getAstroHTMLNano(options?: HtmlnanoOptions, preset?: Presets[key
       const htmlnanoOptions: HtmlnanoOptions = options ?? {}
 
       // disable `removeComments` due to Astro's use of comments for hydration
+      // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
       if (htmlnanoOptions.removeComments) {
         console.warn("`removeComments` is disabled due to Astro's use of comments for hydration.")
       }

@@ -19,7 +19,7 @@ import posthtml, { type Options, type Plugin } from "posthtml"
  */
 export function getAstroPostHTML<PostHTMLUseThis, PostHTMLMessage>(
   plugins?: Plugin<PostHTMLUseThis>[],
-  options?: Options
+  options?: Options,
 ) {
   return async (_context: APIContext, next: MiddlewareNext) => {
     const response = await next()
@@ -33,7 +33,7 @@ export function getAstroPostHTML<PostHTMLUseThis, PostHTMLMessage>(
       // modify HTML using posthtml
       const { html: modifiedHTML, messages } = await posthtml<PostHTMLUseThis, PostHTMLMessage>(plugins).process(
         originalHTML,
-        options
+        options,
       )
 
       // log posthtml messages

@@ -12,10 +12,12 @@ words:
   - applellvm
   - Astrojs
   - buildtools
+  - Cascadia
   - caxa
   - ccache
   - choco
   - cmake
+  - Consolas
   - CPATH
   - Cppcheck
   - CPPFLAGS
@@ -44,16 +46,19 @@ words:
   - msys
   - multilib
   - mxschmitt
+  - Neue
   - noconfirm
   - noprogressbar
   - nothrow
   - npmrc
+  - nvmrc
   - Opencppcoverage
   - OSSDK
   - parceljs
   - pnpm
   - pwsh
   - pypy
+  - Roboto
   - setupcpp
   - setx
   - Syuu

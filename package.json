@@ -11,32 +11,35 @@
   "scripts": {
     "build": "pnpm -r run build",
     "bump": "pnpm exec ncu -u && pnpm -r exec ncu -u && typesync --ignoredeps=dev && pnpm update",
-    "clean": "shx rm -rf ./packages/*/dist/",
+    "clean": "shx rm -rf ./packages/*/dist/ ./test/dist/ ./test/.astro",
     "doc": "shx rm -rf packages/*/README.md && pnpm -r exec readme --path ../../dev/readme/template.md -y && pnpm -r exec ts-readme",
     "format": "prettier --write .",
     "lint": "eslint . --fix",
     "prepare": "pnpm run build",
     "publish": "pnpm -r publish",
-    "test": "run-p test.cspell test.lint",
+    "test": "run-p test.cspell test.lint && run-s test.posthtml test.htmlnano",
     "test.cspell": "cspell lint --no-progress --show-suggestions",
     "test.format": "prettier . --check",
-    "test.lint": "eslint ."
+    "test.htmlnano": "run-s clean build && cd test && cross-env NODE_ENV=production TEST=htmlnano pnpm build",
+    "test.lint": "eslint .",
+    "test.posthtml": "run-s clean build && cd test && cross-env NODE_ENV=production TEST=posthtml pnpm build"
   },
   "prettier": "prettier-config-atomic",
   "devDependencies": {
-    "@types/node": "^20.11.30",
-    "cspell": "^8.6.0",
-    "eslint": "^8.57.0",
-    "eslint-config-atomic": "^1.21.2",
-    "npm-check-updates": "^16.14.17",
-    "npm-run-all2": "^6.1.2",
-    "prettier": "3.2.5",
-    "prettier-config-atomic": "^4.0.0",
-    "readme-md-generator": "^1.0.0",
-    "shx": "^0.3.4",
-    "ts-readme": "^1.1.3",
-    "typescript": "^5.4.3",
-    "typesync": "^0.12.1"
+    "@types/node": "22.13.14",
+    "cross-env": "^7.0.3",
+    "cspell": "8.18.0",
+    "eslint": "^8",
+    "eslint-config-atomic": "1.22.1",
+    "npm-check-updates": "17.1.16",
+    "npm-run-all2": "7.0.2",
+    "prettier": "3.5.3",
+    "prettier-config-atomic": "4.0.0",
+    "readme-md-generator": "1.0.0",
+    "shx": "0.4.0",
+    "ts-readme": "1.1.3",
+    "typescript": "5.8.2",
+    "typesync": "0.14.1"
   },
   "engines": {
     "node": ">=16"
@@ -60,7 +63,7 @@
     "relative-attribute",
     "attribute"
   ],
-  "packageManager": "pnpm@9.12.1",
+  "packageManager": "pnpm@10.7.0",
   "packages": [
     "./packages/*"
   ]
