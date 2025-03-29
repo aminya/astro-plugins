@@ -3,7 +3,6 @@ on:
   pull_request:
   push:
     branches:
-      - master
       - main
 
 jobs:
@@ -15,22 +14,12 @@ jobs:
       matrix:
         os:
           - ubuntu-latest
-          # - macos-latest
-          # - windows-latest
-        node:
-          - 20
-        pnpm:
-          - 8
     steps:
       - uses: actions/checkout@v4
-
       - uses: pnpm/action-setup@v4
-        with:
-          version: ${{ matrix.pnpm }}
-
       - uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node }}
+          node-version-file: ".nvmrc"
           cache: "pnpm"
 
       - name: Install and build

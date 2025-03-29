@@ -51,6 +51,7 @@ words:
   - noprogressbar
   - nothrow
   - npmrc
+  - nvmrc
   - Opencppcoverage
   - OSSDK
   - parceljs
