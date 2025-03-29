@@ -55,10 +55,10 @@ importers:
     dependencies:
       astro:
         specifier: ^4 || ^5
-        version: 4.5.4(@types/node@22.13.14)(terser@5.39.0)(typescript@5.8.2)
+        version: 5.5.5(@types/node@22.13.14)(rollup@4.38.0)(terser@5.39.0)(typescript@5.8.2)(yaml@2.7.0)
       astro-posthtml:
         specifier: ^1.1.3
-        version: 1.1.3(astro@4.5.4(@types/node@22.13.14)(terser@5.39.0)(typescript@5.8.2))
+        version: 1.1.4(astro@5.5.5(@types/node@22.13.14)(rollup@4.38.0)(terser@5.39.0)(typescript@5.8.2)(yaml@2.7.0))
       cssnano:
         specifier: ^7.0.6
         version: 7.0.6(postcss@8.5.3)
@@ -104,7 +104,10 @@ importers:
         version: link:../packages/astro-htmlnano
       astro-posthtml:
         specifier: workspace:*
-        version: link:../packages/astro-posthtml
+        version: 1.1.4(astro@5.5.5(@types/node@22.13.14)(rollup@4.38.0)(terser@5.39.0)(typescript@5.8.2)(yaml@2.7.0))
+      htmlnano:
+        specifier: ^2.1.1
+        version: 2.1.1(cssnano@7.0.6(postcss@8.5.3))(postcss@8.5.3)(relateurl@0.2.7)(srcset@5.0.1)(svgo@3.3.2)(terser@5.39.0)(typescript@5.8.2)
 
 packages:
 
@@ -154,8 +157,8 @@ packages:
     resolution: {integrity: sha512-wxhSKRfKugLwLlr4OFfcqovk+LIFtKwLyGPqMsv+9/ibqqnW3Gv7tBhtKEb0gAyUAC4G9BTVQeQahqnQAhd6IQ==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0}
 
-  '@babel/code-frame@7.24.7':
-    resolution: {integrity: sha512-BcYH1CVJBO9tvyIZ2jVeXgSIMvGZ2FDRvDdOIVQyuklNKSsx+eppDEBq/g47Ayw+RqNFE+URvOShmf+f/qwAlA==}
+  '@babel/code-frame@7.26.2':
+    resolution: {integrity: sha512-RJlIHRueQgwWitWgF8OdFYGZX328Ax5BCemNGlqHfplnRT9ESi8JkFlvaVYbS+UubVY6dpv87Fs2u5M29iNFVQ==}
     engines: {node: '>=6.9.0'}
 
   '@babel/compat-data@7.25.2':
@@ -225,10 +228,6 @@ packages:
 
   '@babel/helpers@7.25.0':
     resolution: {integrity: sha512-MjgLZ42aCm0oGjJj8CtSM3DB8NOOf8h2l7DCTePJs29u+v7yO/RBX9nShlKMgFnRks/Q4tBAe7Hxnov9VkGwLw==}
-    engines: {node: '>=6.9.0'}
-
-  '@babel/highlight@7.24.7':
-    resolution: {integrity: sha512-EStJpq4OuY8xYfhGVXngigBJRWxftKX9ksiGDnmlY3o7B/V7KIAc9X4oiK87uPJSc/vs5L869bem5fhZa8caZw==}
     engines: {node: '>=6.9.0'}
 
   '@babel/parser@7.25.3':
@@ -1514,11 +1513,11 @@ packages:
     resolution: {integrity: sha512-yTgzioUI9MKgBF4LxP7YI+uuZLrnXgHDeW4dpa3VqCNbDmPzL7ix93tc0JJIwWGcskoSAAHZZVaBSp8bHyZZZA==}
     engines: {node: ^14.18.0 || >=16.0.0}
 
-  astro-posthtml@1.1.3:
-    resolution: {integrity: sha512-IKlMuYDzaoRdi53bAFVySaWnnM3SQ8tba50TtBoraYVaQmRxSdmZSxs+6M8SlCKIdmo77nB+8MMJaRYwUSZKYA==}
+  astro-posthtml@1.1.4:
+    resolution: {integrity: sha512-ue5IkcXxYSWDv7P9s6PRWP1Z2E57cc2YQyDYOHJCleeaEbUtEUVDPykBlz2BxS1Pm2A+Yl677XXwu2enj3fGNA==}
     engines: {node: '>=16.x'}
     peerDependencies:
-      astro: ^4
+      astro: ^4 || ^5.0.0
 
   astro@4.5.4:
     resolution: {integrity: sha512-qwMyBn36wXvaCzdCmdbyCxLQGG5hTa3saNdHdqS20Yn1b7Z7oqqcWOb2UjFuq6O8dFqZxU8Hq0/pGFscvsYtJA==}
@@ -3014,10 +3013,6 @@ packages:
   ignore@5.3.2:
     resolution: {integrity: sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g==}
     engines: {node: '>= 4'}
-
-  import-fresh@3.3.0:
-    resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
-    engines: {node: '>=6'}
 
   import-fresh@3.3.1:
     resolution: {integrity: sha512-TR3KfrTZTYLPB6jUjfx6MF9WcWrHL9su5TObK4ZkYgBdWKPOFoSoQIdEuTuR82pmtxH2spWG9h6etwfr1pLBqQ==}
@@ -5663,9 +5658,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@babel/code-frame@7.24.7':
+  '@babel/code-frame@7.26.2':
     dependencies:
-      '@babel/highlight': 7.24.7
+      '@babel/helper-validator-identifier': 7.25.9
+      js-tokens: 4.0.0
       picocolors: 1.1.1
 
   '@babel/compat-data@7.25.2': {}
@@ -5673,7 +5669,7 @@ snapshots:
   '@babel/core@7.25.2':
     dependencies:
       '@ampproject/remapping': 2.3.0
-      '@babel/code-frame': 7.24.7
+      '@babel/code-frame': 7.26.2
       '@babel/generator': 7.25.0
       '@babel/helper-compilation-targets': 7.25.2
       '@babel/helper-module-transforms': 7.25.2(@babel/core@7.25.2)
@@ -5758,13 +5754,6 @@ snapshots:
       '@babel/template': 7.25.0
       '@babel/types': 7.25.2
 
-  '@babel/highlight@7.24.7':
-    dependencies:
-      '@babel/helper-validator-identifier': 7.24.7
-      chalk: 2.4.2
-      js-tokens: 4.0.0
-      picocolors: 1.1.1
-
   '@babel/parser@7.25.3':
     dependencies:
       '@babel/types': 7.25.2
@@ -5800,13 +5789,13 @@ snapshots:
 
   '@babel/template@7.25.0':
     dependencies:
-      '@babel/code-frame': 7.24.7
+      '@babel/code-frame': 7.26.2
       '@babel/parser': 7.25.3
       '@babel/types': 7.25.2
 
   '@babel/traverse@7.25.3':
     dependencies:
-      '@babel/code-frame': 7.24.7
+      '@babel/code-frame': 7.26.2
       '@babel/generator': 7.25.0
       '@babel/parser': 7.25.3
       '@babel/template': 7.25.0
@@ -6910,9 +6899,9 @@ snapshots:
       - supports-color
       - typescript
 
-  astro-posthtml@1.1.3(astro@4.5.4(@types/node@22.13.14)(terser@5.39.0)(typescript@5.8.2)):
+  astro-posthtml@1.1.4(astro@5.5.5(@types/node@22.13.14)(rollup@4.38.0)(terser@5.39.0)(typescript@5.8.2)(yaml@2.7.0)):
     dependencies:
-      astro: 4.5.4(@types/node@22.13.14)(terser@5.39.0)(typescript@5.8.2)
+      astro: 5.5.5(@types/node@22.13.14)(rollup@4.38.0)(terser@5.39.0)(typescript@5.8.2)(yaml@2.7.0)
       posthtml: 0.16.6
 
   astro@4.5.4(@types/node@22.13.14)(terser@5.39.0)(typescript@5.8.2):
@@ -7534,7 +7523,7 @@ snapshots:
   cosmiconfig@9.0.0(typescript@5.8.2):
     dependencies:
       env-paths: 2.2.1
-      import-fresh: 3.3.0
+      import-fresh: 3.3.1
       js-yaml: 4.1.0
       parse-json: 5.2.0
     optionalDependencies:
@@ -9067,11 +9056,6 @@ snapshots:
 
   ignore@5.3.2: {}
 
-  import-fresh@3.3.0:
-    dependencies:
-      parent-module: 1.0.1
-      resolve-from: 4.0.0
-
   import-fresh@3.3.1:
     dependencies:
       parent-module: 1.0.1
@@ -10206,7 +10190,7 @@ snapshots:
 
   parse-json@5.2.0:
     dependencies:
-      '@babel/code-frame': 7.24.7
+      '@babel/code-frame': 7.26.2
       error-ex: 1.3.2
       json-parse-even-better-errors: 2.3.1
       lines-and-columns: 1.2.4
