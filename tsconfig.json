@@ -2,6 +2,10 @@
   "extends": "./node_modules/@tsconfig/bases/node20.tsconfig.json",
   "compilerOptions": {
     "forceConsistentCasingInFileNames": true,
-    "declaration": true
+    "declaration": true,
+    "preserveSymlinks": true,
+    "skipLibCheck": true,
+    "incremental": true,
+    "sourceMap": true
   }
 }

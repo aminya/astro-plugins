@@ -1,5 +1,15 @@
 import type { APIContext, MiddlewareNext } from "astro"
-import posthtml, { type Options, type Plugin } from "posthtml"
+import posthtmlDefault, { type Options, type Plugin } from "posthtml"
+
+const posthtml =
+  typeof posthtmlDefault === "function"
+    ? posthtmlDefault
+    : typeof posthtmlDefault === "object" &&
+        "default" in posthtmlDefault &&
+        typeof (posthtmlDefault as { default: typeof posthtmlDefault }).default === "function"
+      ? // @ts-expect-error - This is a workaround for the fact that posthtml may be exported as a CommonJS module or an ES module
+        (posthtmlDefault.default as typeof posthtmlDefault)
+      : undefined
 
 /**
  * Transform Astro files with PostHTML
@@ -21,6 +31,9 @@ export function getAstroPostHTML<PostHTMLUseThis, PostHTMLMessage>(
   plugins?: Plugin<PostHTMLUseThis>[],
   options?: Options,
 ) {
+  if (posthtml === undefined) {
+    throw new Error("PostHTML is not available. Please ensure you have posthtml installed as a dependency.")
+  }
   return async (_context: APIContext, next: MiddlewareNext) => {
     const response = await next()
     const originalHTML = await response.text()
