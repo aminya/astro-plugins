@@ -1,6 +1,9 @@
 <h1 align="center">astro-posthtml</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <a href="https://www.npmjs.com/package/astro-posthtml" target="_blank">
+    <img alt="Version" src="https://img.shields.io/npm/v/astro-posthtml.svg">
+  </a>
+  <img src="https://img.shields.io/badge/node-%3E%3D16.x-blue.svg" />
   <a href="#" target="_blank">
     <img alt="License: Apache--2.0" src="https://img.shields.io/badge/License-Apache--2.0-yellow.svg" />
   </a>

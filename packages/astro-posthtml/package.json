@@ -2,27 +2,6 @@
   "name": "astro-posthtml",
   "version": "1.1.4",
   "description": "Transform Astro files with PostHTML",
-  "homepage": "https://github.com/aminya/astro-plugins/tree/main/packages/astro-posthtml",
-  "repository": "https://github.com/aminya/astro-plugins/tree/main/packages/astro-posthtml",
-  "license": "Apache-2.0",
-  "author": "Amin Yahyaabadi <aminyahyaabadi74@gmail.com>",
-  "type": "module",
-  "main": "./dist/index.js",
-  "source": "./src/index.ts",
-  "scripts": {
-    "build": "shx rm -rf dist && tsc --pretty",
-    "prepublishOnly": "pnpm run build"
-  },
-  "dependencies": {
-    "posthtml": "^0.16.6"
-  },
-  "devDependencies": {},
-  "peerDependencies": {
-    "astro": "^4 || ^5.0.0"
-  },
-  "engines": {
-    "node": ">=16.x"
-  },
   "keywords": [
     "astro",
     "posthtml",
@@ -36,6 +15,29 @@
     "astro-middleware",
     "optimize"
   ],
+  "homepage": "https://github.com/aminya/astro-plugins/tree/main/packages/astro-posthtml",
+  "repository": "https://github.com/aminya/astro-plugins/tree/main/packages/astro-posthtml",
+  "license": "Apache-2.0",
+  "author": "Amin Yahyaabadi <aminyahyaabadi74@gmail.com>",
+  "type": "module",
+  "main": "./dist/index.js",
+  "source": "./src/index.ts",
+  "scripts": {
+    "build": "shx rm -rf dist && tsc --pretty",
+    "bump": "ncu -u && typesync --ignoredeps=dev",
+    "doc": "shx rm -f ./README.md && readme --path ../../dev/readme/template.md -y && ts-readme",
+    "prepublishOnly": "pnpm run build"
+  },
+  "dependencies": {
+    "posthtml": "^0.16.6"
+  },
+  "devDependencies": {},
+  "peerDependencies": {
+    "astro": "^4 || ^5.0.0"
+  },
+  "engines": {
+    "node": ">=16.x"
+  },
   "targets": {
     "main": {
       "context": "node",

@@ -1,6 +1,9 @@
 <h1 align="center">astro-htmlnano</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <a href="https://www.npmjs.com/package/astro-htmlnano" target="_blank">
+    <img alt="Version" src="https://img.shields.io/npm/v/astro-htmlnano.svg">
+  </a>
+  <img src="https://img.shields.io/badge/node-%3E%3D16.x-blue.svg" />
   <a href="#" target="_blank">
     <img alt="License: Apache--2.0" src="https://img.shields.io/badge/License-Apache--2.0-yellow.svg" />
   </a>
@@ -36,8 +39,6 @@ import { getAstroHTMLNano } from "astro-htmlnano"
 
 export const onRequest = getAstroHTMLNano()
 ```
-
-Note: this is only enabled when `process.env.NODE_ENV === "production"`
 
 <!-- INSERT GENERATED DOCS END -->
 
