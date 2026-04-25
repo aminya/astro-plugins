@@ -15,9 +15,9 @@
     "preview": "astro preview"
   },
   "dependencies": {
-    "astro": "^5.5.5",
+    "astro": "^5.18.1",
     "astro-htmlnano": "workspace:*",
     "astro-posthtml": "workspace:*",
-    "htmlnano": "^2.1.1"
+    "htmlnano": "^2.1.5"
   }
 }
