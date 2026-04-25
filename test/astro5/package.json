@@ -18,6 +18,6 @@
     "astro": "^5.18.1",
     "astro-htmlnano": "workspace:*",
     "astro-posthtml": "workspace:*",
-    "htmlnano": "^2.1.5"
+    "htmlnano": "^3.0.0"
   }
 }
