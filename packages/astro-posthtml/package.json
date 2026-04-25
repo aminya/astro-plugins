@@ -20,12 +20,24 @@
   "license": "Apache-2.0",
   "author": "Amin Yahyaabadi <aminyahyaabadi74@gmail.com>",
   "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "main": "./dist/index.js",
   "source": "./src/index.ts",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "shx rm -rf dist && tsc --pretty",
+    "build": "tsc",
     "bump": "ncu -u && typesync --ignoredeps=dev",
     "doc": "shx rm -f ./README.md && readme --path ../../dev/readme/template.md -y && ts-readme",
+    "format": "prettier --write .",
+    "lint": "run-p 'lint.*'",
+    "lint.cspell": "cspell lint --no-progress --show-suggestions",
+    "lint.eslint": "eslint . --fix --cache --cache-strategy content --cache-location ./.cache/eslint",
+    "lint.prettier": "prettier --check .",
     "prepublishOnly": "pnpm run build"
   },
   "dependencies": {

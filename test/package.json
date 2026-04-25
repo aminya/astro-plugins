@@ -5,7 +5,13 @@
   "scripts": {
     "astro": "astro",
     "build": "astro build",
+    "bump": "",
     "dev": "astro dev",
+    "doc": "",
+    "lint": "run-p 'lint.*'",
+    "lint.cspell": "cspell lint --no-progress --show-suggestions",
+    "lint.eslint": "eslint . --fix --cache --cache-strategy content --cache-location ./.cache/eslint",
+    "lint.prettier": "prettier --write .",
     "preview": "astro preview"
   },
   "dependencies": {
