@@ -29,7 +29,7 @@
   "type": "module",
   "workspaces": [
     "./packages/*",
-    "./test"
+    "./test/*"
   ],
   "scripts": {
     "build": "turbo run build",
@@ -40,8 +40,10 @@
     "doc": "bun '--filter=./packages/*' run doc && bun run format",
     "prepare": "turbo run build",
     "test": "run-s clean build && run-s 'test.*'",
-    "test.htmlnano": "cd test && cross-env NODE_ENV=production TEST=htmlnano bun run build",
-    "test.posthtml": "cd test && cross-env NODE_ENV=production TEST=posthtml bun run build"
+    "test.astro5.htmlnano": "cd test/astro5 && cross-env NODE_ENV=production TEST=htmlnano bun run build",
+    "test.astro5.posthtml": "cd test/astro5 && cross-env NODE_ENV=production TEST=posthtml bun run build",
+    "test.astro6.htmlnano": "cd test/astro6 && cross-env NODE_ENV=production TEST=htmlnano bun run build",
+    "test.astro6.posthtml": "cd test/astro6 && cross-env NODE_ENV=production TEST=posthtml bun run build"
   },
   "prettier": "prettier-config-atomic",
   "overrides": {
