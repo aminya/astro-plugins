@@ -1,3 +1,12 @@
 {
-  "iridium.npm.packageManager": "pnpm"
+  "iridium.npm.packageManager": "pnpm",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/.cache": true,
+    "**/.turbo": true,
+  }
 }

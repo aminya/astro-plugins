@@ -1,6 +1,13 @@
 import type { APIContext, MiddlewareNext } from "astro"
 import { getAstroPostHTML } from "astro-posthtml"
-import htmlnano, { type HtmlnanoOptions, type Presets } from "htmlnano/index.mjs"
+import htmlnanoDefault, { type HtmlnanoOptions, type HtmlnanoPreset } from "htmlnano"
+
+const htmlnano =
+  typeof htmlnanoDefault === "function"
+    ? htmlnanoDefault
+    : typeof htmlnanoDefault.default === "function"
+      ? htmlnanoDefault.default
+      : undefined
 
 /**
  * Minify Astro files with HTMLNano and CSSNano in the production mode
@@ -14,11 +21,14 @@ import htmlnano, { type HtmlnanoOptions, type Presets } from "htmlnano/index.mjs
  * ```
  *
  * @param options The HTMLNano options to use when transforming the HTML files
- * @param preset The HTMLNano preset to use
+ * @param htmlnanoPreset The HTMLNano preset to use
  * @returns A middleware function that can be used in Astro
  * @note this is only enabled when `process.env.NODE_ENV === "production"`
  */
-export function getAstroHTMLNano(options?: HtmlnanoOptions, preset?: Presets[keyof Presets]) {
+export function getAstroHTMLNano(options?: HtmlnanoOptions, htmlnanoPreset?: HtmlnanoPreset) {
+  if (htmlnano === undefined) {
+    throw new Error("htmlnano could not be imported properly. Please ensure it is installed correctly.")
+  }
   if (process.env.NODE_ENV === "production") {
     return (_context: APIContext, next: MiddlewareNext) => {
       const htmlnanoOptions: HtmlnanoOptions = options ?? {}
@@ -30,7 +40,7 @@ export function getAstroHTMLNano(options?: HtmlnanoOptions, preset?: Presets[key
       }
       htmlnanoOptions.removeComments = false
 
-      return getAstroPostHTML([htmlnano(htmlnanoOptions, preset)])(_context, next)
+      return getAstroPostHTML([htmlnano(htmlnanoOptions, htmlnanoPreset)])(_context, next)
     }
   }
   return (_context: APIContext, next: MiddlewareNext) => next()
