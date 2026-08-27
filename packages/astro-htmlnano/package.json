@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "astro-posthtml": "^1.1.4",
-    "cssnano": "^7.1.7",
+    "cssnano": "^9.0.0",
     "htmlnano": "^3.2.1",
     "postcss": "^8.5.10",
     "relateurl": "^0.2.7",
