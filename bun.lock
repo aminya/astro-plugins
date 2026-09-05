@@ -40,7 +40,7 @@
         "@types/relateurl": "^0.2.33",
       },
       "peerDependencies": {
-        "astro": "^4 || ^5 || ^6",
+        "astro": "^4 || ^5 || ^6 || ^7.0.0",
       },
     },
     "packages/astro-posthtml": {
@@ -50,7 +50,7 @@
         "posthtml": "^0.16.7",
       },
       "peerDependencies": {
-        "astro": "^4 || ^5 || ^6",
+        "astro": "^4 || ^5 || ^6 || ^7.0.0",
       },
     },
     "test/astro5": {
